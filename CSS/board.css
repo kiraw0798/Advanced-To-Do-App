@@ -1,0 +1,159 @@
+.taskContainer{
+    min-height: 30vh;
+    height: max-content;
+    margin:85px auto 20px auto;
+    overflow: visible;
+    border-radius: 10px;
+    background-color: var(--sectionColorLightMode) ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 10px 20px;
+}
+/* needs dark mode */
+.taskContainer.dark{
+    background-color: var(--bgColorDarkMode);
+}
+
+
+
+
+.taskStatus{
+    border: none;
+    min-height: 10vh;
+    background-color: rgba(0,0,0,0.05); /* Optional: just to see them better */
+    border-radius: 8px;
+    height: fit-content;
+}
+/* needs dark mode */
+.taskStatus.dark{
+    background-color: #13213e;
+}
+
+
+.toDo{
+    border-top: 5px solid var(--todoBorderColor);
+}
+.inProgress{
+    border-top: 5px solid var(--inProgressBorderColor);
+}
+.done{
+    border-top: 5px solid var(--doneBorderColor);
+}
+
+
+.status-title{
+    font-weight: 400;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-bottom: 1px solid rgb(204, 202, 202);
+    color: #000000;
+}
+/* needs dark mode */
+.status-title.dark{
+    color: #d7deee;
+}
+
+
+
+.task{
+    border-radius: 5px;
+    width: 90%;
+    height: fit-content;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: #ffffff;
+    cursor: grab;
+}
+
+.task.todo {
+    border : none;
+    border-left: 5px solid var(--todoBorderColor);
+}
+.task.inProgress {
+    border : none;
+    border-left: 5px solid var(--inProgressBorderColor);
+}
+.task.done {
+    border : none;
+    border-left: 5px solid var(--doneBorderColor);
+
+}
+/* needs dark mode */
+.task.dark{
+    background-color: #1f2c3c;
+}
+
+
+.task-name{
+    font-size: x-large;
+    overflow: scroll;
+    margin: 3px 0;
+    color: #000000;
+}
+.task-name.complete{
+    font-size: x-large;
+    overflow: scroll;
+    margin: 3px 0;
+    color: rgba(0, 0, 0, 0.43);
+    text-decoration: line-through;
+}
+/* needs dark mode */
+.task-name.dark{
+    color: #c2cad8;
+}
+.task-name.dark.complete {
+    color: #c2cad878;
+}
+
+
+
+.task-desc{
+    margin: 3px 0;
+    overflow: scroll;
+    font-size: medium;
+    cursor: pointer;
+    color: #000000;
+}
+/* needs dark mode */
+.task-desc.dark{
+    color: #697788;
+}
+
+.due-date{
+    margin: 3px 0;
+    font-size: small;
+    display: inline;
+    color: #000000;
+}
+/* needs dark mode */
+.due-date.dark{
+    color: #697788;
+}
+
+.priority-shower{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    float: right;
+    position: relative;
+    transform: translate( -53% , -260%);
+    background-color: var(--lowPriorityColor);
+}
+.delete-task{
+    position: relative;
+    float: right;
+    bottom: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px ;
+    width: 25px ;
+    height: 25px;
+    color: rgb(238, 114, 114);
+    
+}
+.delete-task:active{
+    transform: scale(0.9);
+}
