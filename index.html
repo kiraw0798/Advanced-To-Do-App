@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/styles.css"/>
+    <link rel="stylesheet" href="CSS/board.css"/>
+    <link rel="stylesheet" href="CSS/form.css"/>
+    <title>Advanced To-do App</title>
+</head>
+<body>
+    <section class="navBar">
+        <div class="logo"><img src="Assets/Logo_Light_Mode.png" alt="logo" class="logoImage" loading="lazy"></div>
+        <div class="searchBar">
+            <input class="search" type="text" placeholder="Search Tasks">
+            <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <button class="addTask">+ Add Task</button>
+        <div class="lightToggleContainer">
+            <div class="lightToggle"><div class="toggle">☀️</div></div>
+        </div>
+    </section>
+
+
+    <section id="container">
+        <section class="taskContainer">
+            <div class="toDo taskStatus">
+                <h1 class="status-title" id="toDo">Todo</h1>
+            </div>
+            <div class="inProgress taskStatus">
+                <h1 class="status-title" id="inProgress">In Progress</h1>
+
+            </div>
+            <div class="done taskStatus">
+                <h1 class="status-title" id="done">Done</h1>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <div class="overlay" id="overlay">
+            <section class="taskFormContainer">
+                <form class="taskForm">
+                    <label for="taskName">
+                        Task: <input class="taskName" type="text" id="taskName"  name="taskName" required>
+                    </label>
+                    <label for="taskDesc">
+                        Description: <textarea class="taskDesc" id="taskDesc" name="description"></textarea>
+                    </label>
+                    <label for="status">
+                        Status: 
+                            <select class="status" id="status" name="status" required>
+                                <option value="todo">To Do</option>
+                                <option value="progress">In progress</option>
+                                <option value="done">Done</option>
+                            </select>
+                    </label>
+                    <label for="priority">
+                        Priority: 
+                            <select class="priority" id="priority" name="priority">
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                    </label>
+                    <label for="taskDueDate" >
+                        Due Date: <input class="taskDueDate" type="date" id="taskDueDate" name="date" >
+                    </label>
+                    <div class="form-actions">
+                        <button  class="formBtns" id="cancel" type="button">Cancel</button>
+                        <button  class="formBtns" id="submit" type="submit">Save Task</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+
+    </section>
+    
+
+
+
+
+    <script src="JS/app.js"></script>
+    <script src="JS/theme.js"></script>
+    <script src="JS/tasks.js"></script>
+    <script src="JS/storage.js"></script>
+    <script src="JS/dragdrop.js"></script>
+</body>
+</html>
