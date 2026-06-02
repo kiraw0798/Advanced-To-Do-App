@@ -1,0 +1,174 @@
+:root{
+    --bgColorDarkMode: #0d1522;
+    --bgColorLightMode: #ffffff;
+    --sectionColorDarkMode: #17212b;
+    --sectionColorLightMode:#f4f4f4;
+    --textColorDarkMode: #f5f5f5;
+    --textColorLightMode: #0f172a;
+    --buttonColorLightMode: #3f96d0;
+    --buttonColorDarkMode: #2e6a91;
+    --buttonTextColorLightMode: #ffffff;
+    --todoBorderColor: #5780e4 ;
+    --inProgressBorderColor: #ed9614;
+    --doneBorderColor: #0aab79 ;
+    --lowPriorityColor: #28a745;
+    --mediumPriorityColor: #fd7e14;
+    --highPriorityColor: #f53649;
+}
+
+body{
+    background-color: var(--bgColorLightMode);
+    
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+
+
+}
+/* needs dark mode */
+body.dark{
+    background-color: var(--bgColorDarkMode);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+/* Navigation Bar Styles  */
+.navBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--sectionColorLightMode);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+/* needs dark mode */
+.navBar.dark{
+    background-color: var(--sectionColorDarkMode);
+}
+
+
+.logoImage{
+   width: 90px;
+   height: 45px;
+   border-radius: 45px;
+}
+.logo{
+    margin: auto 20px;
+}
+
+.searchBar{
+    display: flex;
+    width: 250px;
+    height: 30px;
+}
+
+
+.search{
+    outline: none;
+    border: none;
+    width: 70%;
+    height: 100%;
+    padding: 5px; 
+    border-radius: 8px 0 0 8px;
+    background-color: #ffffff;
+    color: #000000;
+}
+/* needs dark mode */
+.search.dark{
+    background-color: #0f254c;
+    color: #f0f0f0;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+
+.searchBtn{
+    border: none;
+    width: 30%;
+    height: 100%;
+    background-color: var(--buttonColorLightMode);
+    color: var(--buttonTextColorLightMode);
+    border-radius: 0 8px 8px 0;
+}
+/* needs dark mode */
+.searchBtn.dark{
+    background-color: #3d68d9;
+}
+
+.addTask{
+    color: var(--buttonTextColorLightMode);
+    background-color: var(--buttonColorLightMode);
+
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+}
+/* needs dark mode */
+.addTask.dark{
+    background-color: #263143;
+    color: #d7deee ; 
+}
+
+
+.addTask:active{
+    transform: scale(0.9);
+    transition: 0.15s ease-in-out;
+}
+.lightToggle{
+    padding: 0;
+    width: 45px;
+    height: 24px;
+    border: none;
+    border-radius: 15px;
+    background-color: #255b7f;
+
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+
+    cursor: pointer;
+}
+.toggle{
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #c0c0c0;
+    background-color: #c0c0c0 ;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    line-height: 1;
+}
+.toggle.dark{ 
+    margin-left: auto;
+    background-color: #17212b;
+    transition: ease-in-out;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
