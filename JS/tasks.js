@@ -17,6 +17,10 @@ myForm.addEventListener('submit', (e) =>{
         formDueDate: data.get('date')
     }
 
+    if (taskData.formDueDate === '') {
+        taskData.formDueDate = new Date().toISOString().split('T')[0];
+    }
+
     saveTaskToLocalStorage(taskData);
 
     overlay.style.display = 'none';
@@ -25,8 +29,8 @@ myForm.addEventListener('submit', (e) =>{
 })
 
 
-function renderTasks(){
-    const allTasks = JSON.parse(localStorage.getItem('myTasks')) || [];
+function renderTasks(filteredTasks = null){
+    const allTasks = filteredTasks || JSON.parse(localStorage.getItem('myTasks')) || [];
     
 
     todoColumn.innerHTML = '<h1 class="status-title" >Todo</h1>';
@@ -49,6 +53,7 @@ function renderTasks(){
 
         taskElement.addEventListener('dragstart', () => {
             taskElement.classList.add('dragging');
+            taskElement.style.cursor = 'grabbing'
         })
         taskElement.addEventListener('dragend', () => {
             taskElement.classList.remove('dragging');
@@ -145,7 +150,6 @@ taskContainer.addEventListener('click' , (e) =>{
         deleteFromStorage(idToDelete);
     }
 })
-
 
 
 renderTasks()
